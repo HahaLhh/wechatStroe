@@ -1,0 +1,34 @@
+.frirst_tab{
+    .goods_item{
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        .goods_img_warp{
+            flex: 2;
+            image{
+                width: 70%;
+            }
+        }
+        .goods_info_warp{
+            flex: 3;
+            display: flex;
+            //主轴方向
+            flex-direction: column ;
+            //空白怀绕
+            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
+            .goods_name{
+                //文字溢出隐藏
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                //第几行开始显示省略号
+                -webkit-line-clamp: 2;
+            }
+            .good_price{
+                color: var(--themeColor);
+                font-size: 32rpx;
+            }
+        }
+    }
+}

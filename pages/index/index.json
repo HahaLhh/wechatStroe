@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchinput":"../../components/SearchInput/SearchInput",
+    "Swipershow":"../../components/Swipershow/Swipershow"
+  },
+  "navigationBarTitleText": "主页"
+}     

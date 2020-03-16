@@ -1,0 +1,7 @@
+.swiper {
+  height: calc(750rpx * 145px / 320px);
+  width: 750rpx;
+}
+.swiper .swiperImage {
+  width: 100%;
+}

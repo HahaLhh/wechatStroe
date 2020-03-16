@@ -1,0 +1,32 @@
+<!-- 主页 -->
+<!-- 搜索框组件 -->
+<view class="store">
+    <!-- 搜索框 -->
+    <searchinput></searchinput>
+    <!-- swiper轮播图 -->
+    <Swipershow swiperImage="{{swiperList}}"></Swipershow>
+    <!-- 分类页 -->
+    <view class="navigationTable">
+        <navigator wx:for="{{navigatorList}}" wx:key="name" open-type="switchTab" url="/pages/category/index">
+            <image src="{{item.image_src}}" mode="widthFix"></image>
+            <!-- <text class="navigatorName">
+                {{item.name}}
+            </text> -->
+        </navigator>
+    </view>
+    <!-- 楼层 -->
+    <view class="index_floor">
+        <view class="floor_group" wx:for="{{floorDataList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+            <!-- 标题 -->
+            <view class="floor_title">
+                <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+            </view>
+            <!-- 内容 -->
+            <view class="floor_list">
+                <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name" url="{{item2.navigator_url}}">
+                    <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

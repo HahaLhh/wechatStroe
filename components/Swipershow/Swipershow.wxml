@@ -1,0 +1,17 @@
+<!-- components/Swipershow/Swipershow.wxml -->
+<view class="">
+    <swiper class="swiper"
+        autoplay
+        indicator-dots="{{true}}"
+        indicator-indicator-color="rgba(0, 0, 0, .3)"
+        indicator-active-color="#f5f5f5"
+        interval="2000">
+        <block wx:for="{{swiperImage}}" wx:key="goods_id">
+            <swiper-item >
+                <navigator  url="{{item.navigator_url}}">
+                    <image class="swiperImage" src="{{item.image_src}}" mode="widthFix"></image>
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
